@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademiTrack</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configure Tailwind CSS for class-based dark mode
+    // This must come BEFORE loading the main Tailwind script
+    tailwind.config = {
+      darkMode: 'class', // or 'media'
+      theme: {
+        extend: {
+          // You can add custom theme extensions here if needed
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar styles for better aesthetics */
+    /* For Webkit browsers (Chrome, Safari, newer Edge) */
+    ::-webkit-scrollbar {
+      width: 8px; /* Width of the scrollbar */
+      height: 8px; /* Height of the scrollbar for horizontal scroll */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Track color */
+      border-radius: 10px;
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: #2d3748; /* Dark track color */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c1c1c1; /* Thumb color */
+      border-radius: 10px;
+    }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #4a5568; /* Dark thumb color */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a1a1a1; /* Thumb color on hover */
+    }
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #718096; /* Dark thumb color on hover */
+    }
+
+    /* For Firefox */
+    /* Note: Firefox scrollbar styling is less customizable */
+    * {
+      scrollbar-width: thin; /* "auto" or "thin" */
+      scrollbar-color: #c1c1c1 #f1f1f1; /* thumb and track color */
+    }
+    .dark * {
+       scrollbar-color: #4a5568 #2d3748; /* Dark thumb and track color */
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-100 dark:bg-slate-900">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "AcademiTrack - Class & Task Manager",
+  "description": "A React application to manage academic classes and tasks, helping students stay organized. Features include adding, editing, and deleting classes and their associated assignments or exams, with due date tracking and localStorage persistence.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
