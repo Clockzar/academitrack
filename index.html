@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AcademiTrack</title>
+  
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js",
+    "firebase/": "https://esm.sh/firebase@^11.10.0/"
+  }
+}
+</script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configure Tailwind CSS for class-based dark mode
+    // This must come BEFORE loading the main Tailwind script
+    tailwind.config = {
+      darkMode: 'class', // or 'media'
+      theme: {
+        extend: {
+          // You can add custom theme extensions here if needed
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom scrollbar styles for better aesthetics */
+    /* For Webkit browsers (Chrome, Safari, newer Edge) */
+    ::-webkit-scrollbar {
+      width: 8px; /* Width of the scrollbar */
+      height: 8px; /* Height of the scrollbar for horizontal scroll */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b; /* slate-800 */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #a8a29e; /* stone-400 */
+      border-radius: 10px;
+    }
+    
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569; /* slate-600 */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #78716c; /* stone-500 */
+    }
+    
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b; /* slate-500 */
+    }
+
+    /* Ensure body takes full height and no overflow */
+    html, body, #root {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-100 dark:bg-slate-900">
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
